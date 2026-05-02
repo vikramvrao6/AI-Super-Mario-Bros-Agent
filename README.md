@@ -1,6 +1,6 @@
-# neuro_mario
+# Machine Learning: Reinforcement & Evolutionary AI Agents (Super Mario Bros NES)
 
-Three different approaches to beating World 1-1 of Super Mario Bros with no human demonstrations or hardcoded rules. Built this to understand reinforcement learning from scratch — DQN, PPO, and a genetic algorithm, each implemented without high-level RL libraries.
+Created three different approaches to beating World 1-1 of Super Mario Bros with no human demonstrations or hardcoded rules. Built this to understand reinforcement learning from scratch. DQN, PPO, and a genetic algorithm, each implemented without high-level RL libraries.
 
 ![Mario Agent Demo](demo.gif)
 
@@ -115,6 +115,5 @@ Trained on Google Colab A100. If you're running locally, MPS works on Apple Sili
 
 ## Notes
 
-The genetic algorithm outperforming gradient-based methods this early was surprising. The intuition makes sense in retrospect — DQN and PPO both struggle with exploration when rewards are sparse and delayed, which is exactly the case here. The genetic algorithm sidesteps this entirely by evaluating complete rollouts and optimizing directly for x-position.
+The genetic algorithm outperforming gradient-based methods this early was surprising. DQN and PPO both struggle with exploration when rewards are sparse and delayed, which is exactly the case here. The genetic algorithm sidesteps this entirely by evaluating complete rollouts and optimizing directly for x-position.
 
-Whether that advantage holds as the task gets harder (later worlds, longer episodes) is an open question.
